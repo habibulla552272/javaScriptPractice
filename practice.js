@@ -565,29 +565,25 @@
 
 // for (let i = 0; i < array.length; i++) {
 //     const value = array[i];
-//     counts[value] = (counts[value] || 0) + 1; 
+//     counts[value] = (counts[value] || 0) + 1;
 
 //     console.log(counts);
-    
-// }
 
+// }
 
 // console.log("----------------");
 
 // console.log(counts);
-    
-
 
 // const uniqueOnce = [];
 // for (let i = 0; i < array.length; i++) {
 //     const value = array[i];
-//     if (counts[value] === 1) { // add values 
+//     if (counts[value] === 1) { // add values
 //         uniqueOnce.push(value);
 //     }
 // }
 
 // console.log(uniqueOnce); // Output: [2, 70, 30, 8]
-
 
 // const array = [1, 2, 70, 30, 1, 8, 15, 15];
 // let element = [];
@@ -600,16 +596,10 @@
 //     if(value !== array[index]){
 //       item = array[index];
 //       element= item;
-      
+
 //     }
-  
-    
-     
+
 //   }
-   
-  
-  
- 
 
 // })
 
@@ -617,34 +607,26 @@
 
 // console.log(newarray);
 
-
-
 // const array = [1, 2, 70, 30, 1, 8, 15, 15];
 // const uniqueOnce = array.filter((value, index, self) => {
 //   self.indexOf(value) === self.lastIndexOf(value);
 // });
 // console.log(uniqueOnce);
 
-
-
-
 // const array = [1, 2, 70, 30, 1, 8, 15, 15];
 // const uniqueArray = array.filter((value, index) => array.indexOf(value) === array.lastIndexOf(value));
-// console.log(uniqueArray); 
-
+// console.log(uniqueArray);
 
 // const array = [1, 2, 70, 30, 1, 8, 15, 15];
 // let element = [];
 
 // let item;
 
-
 // let a = array.filter((item)={
-  
+
 // })
 
 // console.log(x);
-
 
 // function bbbbb(arr, element) {
 //   for (let i = 0; i < arr.length; i++) {
@@ -668,7 +650,7 @@
 // let case2 = [3,2,4,]
 //  let x = twoSum(case2, 6);
 //  console.log(x);
- 
+
 //  var userinfo ={
 //   names:'Habibulla',
 //   age: 21,
@@ -692,10 +674,9 @@
 
 //   var copiedval =Array.isArray(obj) ? []:{};
 //   console.log(Object.keys(obj));
-  
+
 //   var keys = Object.keys(obj);
-  
-  
+
 //   for(var i=0;i<keys.length;i++){
 //     copiedval[keys[i]]=makeDeepCopy(obj[keys[i]]);
 //   }
@@ -709,112 +690,80 @@
 // console.log(copy.twitter.paid);
 // console.log(userinfo.twitter.paid);
 
-
-
-
-
-
-
-function func(){
+function func() {
   let count = 0;
-  return function(){
-    return count += 1;
-  }
+  return function () {
+    return (count += 1);
+  };
 }
 
-let add= func();
+let add = func();
 
-function addcount(){
-  document.getElementById('div1').innerText= add()
+function addcount() {
+  document.getElementById("div1").innerText = add();
 }
 
 //mutable immutable
 
+let x = "habibulla";
+let y = x;
 
-let x= 'habibulla'
-let y= x;
-
-y='habib'
+y = "habib";
 console.log(x);
 console.log(y);
 
-
 //mutable
 let obj = {
-  name:'habibulla',
-  age:21
-}
+  name: "habibulla",
+  age: 21,
+};
 
-let obj2=obj;
-obj2.name = 'apple'
+let obj2 = obj;
+obj2.name = "apple";
 console.log(obj);
 console.log(obj2);
 
-let arr=['tamim','sakib','mutable'];
+let arr = ["tamim", "sakib", "mutable"];
 
-let arr2=arr;
+let arr2 = arr;
 
-arr2[0]='immutable';
+arr2[0] = "immutable";
+
+arr.push("khalid");
 console.log(arr);
 console.log(arr2);
-
+console.log(arr);
 
 //hoisting
 var hos;
 
-
-hos=5;
+hos = 5;
 hos = 8;
 console.log(hos);
+var hos;
+letdata = 5;
 
-
-letdata=5;
-let letdata;
 console.log(letdata);
+let letdata;
 
-
-
-const constval=5;
+const constval = 5;
 console.log(constval);
 
+let arr3 = [1, 2, 5, 6, 7, 9, 5, 88];
 
-
-let arr3 =[1,2,5,6,7,9,5,88];
-
-let array3= arr3.reduce((prev,curre,index,arr)=>{
+let array3 = arr3.reduce((prev, curre, index, arr) => {
   console.log(prev);
-  
 
-  return prev+curre;
-  
-},0)
+  return prev + curre;
+}, 0);
 console.log(array3);
 
-let slice=arr3.slice(1,3
-
-);
+let slice = arr3.slice(1, 3);
 console.log(arr3);
 console.log(slice);
 
-
-arr3.splice(2,0,'habib','habu');
+arr3.splice(2, 0, "habib", "habu");
 console.log(arr3);
 
-
-let inde = arr3.lastIndexOf(5)
+let inde = arr3.lastIndexOf(5);
 console.log(inde);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
