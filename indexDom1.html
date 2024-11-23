@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="addBox">
+      <h1>welcome to dom</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad consectetur
+        libero deleniti incidunt, suscipit corrupti illum sequi iure sapiente
+        optio placeat voluptatum quasi dicta atque ipsa excepturi autem et quia!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, quia.
+      </p>
+
+      <p>new element add</p>
+    </div>
+    <textarea name="" id="newtext"></textarea>
+    <button id="submit">Submit</button>
+
+    <script>
+      document.getElementById("submit").addEventListener("click", () => {
+        let addBox = document.getElementById("addBox");
+        let textvalue = document.getElementById("newtext");
+        console.log(textvalue);
+
+        let newtextvalue = textvalue.value;
+        let p = document.createElement("p");
+        p.innerHTML = newtextvalue;
+
+        addBox.appendChild(p);
+
+        textvalue.value = "";
+      });
+    </script>
+
+    <script src="DOM.js"></script>
+  </body>
+</html>

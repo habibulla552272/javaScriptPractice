@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #text {
+        width: 90%;
+        margin: 0 auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: space-between;
+      }
+
+      .card {
+        width: 250px;
+        height: 440px;
+        margin: 10px 10px ;
+        background-color: honeydew;
+        border: 1px solid skyblue;
+        border-radius: 10px;
+
+        
+      }
+      .card img{
+        width: 230px;
+        margin: 0 auto;
+        border-radius: 20px;
+        height: 300px;
+        padding: 0 10px;
+      
+      }
+      .card-div {
+        
+        background-color: rgb(18, 178, 173);
+       
+        padding-left: 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        height: 30%;
+      }
+      .title{
+        font-size: 20px;
+      
+      }
+      .price{
+        font-size: 20px;
+        padding-top: 5px;
+      }
+
+      @media (max-width: 600px) {
+        #text {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .card{
+          display: flex;
+          flex-direction: column;
+          margin: 10px auto;
+          text-align: center;
+
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <p id="text"></p> -->
+    <div id="text"></div>
+
+    <!-- <button onclick="startWorker()">start Worker</button>
+    <button onclick="stopWorder()">Stop Worker</button>
+    <button onclick="alert('hello brother ')">Click</button>
+     -->
+
+    <!-- <button onclick="fetchdata()">See data</button>
+      -->
+
+    <!-- <button onclick="getLocation()">Show Location</button> -->
+
+    <script src="api.js"></script>
+  </body>
+</html>

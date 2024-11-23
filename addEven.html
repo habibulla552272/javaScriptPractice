@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .togle {
+        display: none;
+        text-align: center;
+        padding: 20px;
+        background-color: cornflowerblue;
+        font-size: 20px;
+      }
+
+      body.white {
+        background-color: white;
+      }
+
+      body.dark {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1
+      id="problem1"
+      style="
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        color: aqua;
+      "
+    >
+      Click the First Problem
+    </h1>
+
+    <div style="text-align: center; background-color: bisque">
+      <h1>Problem 2</h1>
+      <button id="problem2">problem 2</button>
+      <button id="count">Click</button>
+    </div>
+
+    <div style="background: antiquewhite; color: black; text-align: center">
+      <h1>problem 3</h1>
+      <button style="font-size: 2rem" id="toggle">Click</button>
+      <p class="togle" id="problem3">
+        A mix of martial arts and comedy, this indie film is about three
+        middle-aged men who were once kung fu prodigies and must now reconnect
+        with their skills to avenge their master. It's fun, with solid fight
+        scenes and nostalgic martial arts vibes.
+      </p>
+    </div>
+
+    <div>
+      <h1>problem 4</h1>
+      <button id="problem4">click here</button>
+    </div>
+    <script src="AddEventLitener.js"></script>
+  </body>
+</html>
