@@ -690,80 +690,227 @@
 // console.log(copy.twitter.paid);
 // console.log(userinfo.twitter.paid);
 
-function func() {
-  let count = 0;
-  return function () {
-    return (count += 1);
-  };
+// function func() {
+//   let count = 0;
+//   return function () {
+//     return (count += 1);
+//   };
+// }
+
+// let add = func();
+
+// function addcount() {
+//   document.getElementById("div1").innerText = add();
+// }
+
+// //mutable immutable
+
+// let x = "habibulla";
+// let y = x;
+
+// y = "habib";
+// console.log(x);
+// console.log(y);
+
+// //mutable
+// let obj = {
+//   name: "habibulla",
+//   age: 21,
+// };
+
+// let obj2 = obj;
+// obj2.name = "apple";
+// console.log(obj);
+// console.log(obj2);
+
+// let arr = ["tamim", "sakib", "mutable"];
+
+// let arr2 = arr;
+
+// arr2[0] = "immutable";
+
+// arr.push("khalid");
+// console.log(arr);
+// console.log(arr2);
+// console.log(arr);
+
+// //hoisting
+// var hos;
+
+// hos = 5;
+// hos = 8;
+// console.log(hos);
+// var hos;
+// letdata = 5;
+
+// console.log(letdata);
+// let letdata;
+
+// const constval = 5;
+// console.log(constval);
+
+// let arr3 = [1, 2, 5, 6, 7, 9, 5, 88];
+
+// let array3 = arr3.reduce((prev, curre, index, arr) => {
+//   console.log(prev);
+
+//   return prev + curre;
+// }, 0);
+// console.log(array3);
+
+// let slice = arr3.slice(1, 3);
+// console.log(arr3);
+// console.log(slice);
+
+// arr3.splice(2, 0, "habib", "habu");
+// console.log(arr3);
+
+// let inde = arr3.lastIndexOf(5);
+// console.log(inde);
+
+// iterator
+
+// function makeIterator(start = 0, end = Infinity, step = 1) {
+//   let nexindex = start;
+//   let iteratorCount = 0;
+//   return {
+//     next() {
+//       let result;
+//       if (nexindex < end) {
+//         result = { value: nexindex, done: false };
+//         nexindex += step;
+//         iteratorCount++;
+//         return result;
+//       }
+//       return { value: iteratorCount, done: true };
+//     },
+//   };
+  
+// }
+
+// let myiterator =makeIterator(1,20,2);
+// let result= myiterator.next();
+// while(!result.done){
+//   console.log(result.value);
+//   result =myiterator.next();
+  
+// }
+
+
+function* makeIterator (start=0,end=Infinity,step=2){
+ let  letcounter =0;
+  for(let i=start;i<end;i+=step){
+    letcounter++;
+    yield i;
+  }
+  return letcounter;
 }
 
-let add = func();
+let one =makeIterator(1,10,2);
 
-function addcount() {
-  document.getElementById("div1").innerText = add();
+for(let v of one){
+  console.log(v);
+  
 }
 
-//mutable immutable
+function* number(){
+  let i=0;
+  while(true){
+    yield i++;
+  }
+}
 
-let x = "habibulla";
-let y = x;
+let gen =number();
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
 
-y = "habib";
-console.log(x);
-console.log(y);
 
-//mutable
-let obj = {
-  name: "habibulla",
-  age: 21,
-};
 
-let obj2 = obj;
-obj2.name = "apple";
-console.log(obj);
-console.log(obj2);
+let person={
+  name:'habibulla',
+  age: 21
 
-let arr = ["tamim", "sakib", "mutable"];
+  
+}
 
-let arr2 = arr;
+person.prototype={
+  ages:25,
+  names:'habu'
+}
 
-arr2[0] = "immutable";
+console.log(person);
+console.log(person.prototype);
 
-arr.push("khalid");
-console.log(arr);
-console.log(arr2);
-console.log(arr);
 
-//hoisting
-var hos;
 
-hos = 5;
-hos = 8;
-console.log(hos);
-var hos;
-letdata = 5;
 
-console.log(letdata);
-let letdata;
+persons.prototype={
+  play(){
+    console.log('person play football');
+    
+  }
+}
+function persons(name,age){
+  let person=Object.create(persons.prototype);
+  person.name= name;
+  person.age=age;
 
-const constval = 5;
-console.log(constval);
+  return person
+}
 
-let arr3 = [1, 2, 5, 6, 7, 9, 5, 88];
 
-let array3 = arr3.reduce((prev, curre, index, arr) => {
-  console.log(prev);
+let pr =persons('habib',29);
+console.log(pr);
 
-  return prev + curre;
-}, 0);
-console.log(array3);
+pr.play();
+console.log(pr.name);
 
-let slice = arr3.slice(1, 3);
-console.log(arr3);
-console.log(slice);
+function person3(name,age){
+  
+  this.name=name;
+  this.age=age;
 
-arr3.splice(2, 0, "habib", "habu");
-console.log(arr3);
+}
+person3.prototype={
+  play(){
+    console.log('he play football');
+    
+  },
+  sleep(){
+    console.log('person sleeping');
+    
+  }
+  
+}
 
-let inde = arr3.lastIndexOf(5);
-console.log(inde);
+let text =new person3("prototype", 33);
+console.log(text);
+
+let user ={
+  name:'john',
+  surname:'smith',
+  set fullName(value){
+    console.log('fullname value');
+    
+    console.log(value);
+    
+    [this.name,this.surname]= value.split(' ');
+  },
+  get fullName(){
+    return `${this.name} ${this.surname}`;
+  }
+}
+
+let addmin={
+  __proto__:user,
+  isAdmin:true
+}
+
+alert(user.fullName);
+alert(addmin.fullName);
+addmin.fullName = 'Alic Cooper';
+
+alert(addmin.fullName);
+
+alert(user.fullName);
