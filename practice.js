@@ -797,120 +797,148 @@
 // }
 
 
-function* makeIterator (start=0,end=Infinity,step=2){
- let  letcounter =0;
-  for(let i=start;i<end;i+=step){
-    letcounter++;
-    yield i;
-  }
-  return letcounter;
-}
+// function* makeIterator (start=0,end=Infinity,step=2){
+//  let  letcounter =0;
+//   for(let i=start;i<end;i+=step){
+//     letcounter++;
+//     yield i;
+//   }
+//   return letcounter;
+// }
 
-let one =makeIterator(1,10,2);
+// let one =makeIterator(1,10,2);
 
-for(let v of one){
-  console.log(v);
+// for(let v of one){
+//   console.log(v);
   
-}
+// }
 
-function* number(){
-  let i=0;
-  while(true){
-    yield i++;
-  }
-}
+// function* number(){
+//   let i=0;
+//   while(true){
+//     yield i++;
+//   }
+// }
 
-let gen =number();
-console.log(gen.next());
-console.log(gen.next());
-console.log(gen.next());
+// let gen =number();
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
 
 
 
-let person={
-  name:'habibulla',
-  age: 21
+// let person={
+//   name:'habibulla',
+//   age: 21
 
   
-}
+// }
 
-person.prototype={
-  ages:25,
-  names:'habu'
-}
+// person.prototype={
+//   ages:25,
+//   names:'habu'
+// }
 
-console.log(person);
-console.log(person.prototype);
-
-
+// console.log(person);
+// console.log(person.prototype);
 
 
-persons.prototype={
-  play(){
-    console.log('person play football');
+
+
+// persons.prototype={
+//   play(){
+//     console.log('person play football');
     
-  }
-}
-function persons(name,age){
-  let person=Object.create(persons.prototype);
-  person.name= name;
-  person.age=age;
+//   }
+// }
+// function persons(name,age){
+//   let person=Object.create(persons.prototype);
+//   person.name= name;
+//   person.age=age;
 
-  return person
-}
+//   return person
+// }
 
 
-let pr =persons('habib',29);
-console.log(pr);
+// let pr =persons('habib',29);
+// console.log(pr);
 
-pr.play();
-console.log(pr.name);
+// pr.play();
+// console.log(pr.name);
 
-function person3(name,age){
+// function person3(name,age){
   
-  this.name=name;
-  this.age=age;
+//   this.name=name;
+//   this.age=age;
 
-}
-person3.prototype={
-  play(){
-    console.log('he play football');
+// }
+// person3.prototype={
+//   play(){
+//     console.log('he play football');
     
-  },
-  sleep(){
-    console.log('person sleeping');
+//   },
+//   sleep(){
+//     console.log('person sleeping');
     
-  }
+//   }
   
-}
+// }
 
-let text =new person3("prototype", 33);
-console.log(text);
+// let text =new person3("prototype", 33);
+// console.log(text);
 
-let user ={
-  name:'john',
-  surname:'smith',
-  set fullName(value){
-    console.log('fullname value');
+// let user ={
+//   name:'john',
+//   surname:'smith',
+//   set fullName(value){
+//     console.log('fullname value');
     
-    console.log(value);
+//     console.log(value);
     
-    [this.name,this.surname]= value.split(' ');
-  },
-  get fullName(){
-    return `${this.name} ${this.surname}`;
-  }
-}
+//     [this.name,this.surname]= value.split(' ');
+//   },
+//   get fullName(){
+//     return `${this.name} ${this.surname}`;
+//   }
+// }
 
-let addmin={
-  __proto__:user,
-  isAdmin:true
-}
+// let addmin={
+//   __proto__:user,
+//   isAdmin:true
+// }
 
-alert(user.fullName);
-alert(addmin.fullName);
-addmin.fullName = 'Alic Cooper';
+// alert(user.fullName);
+// alert(addmin.fullName);
+// addmin.fullName = 'Alic Cooper';
 
-alert(addmin.fullName);
+// alert(addmin.fullName);
 
-alert(user.fullName);
+// alert(user.fullName);
+
+// alert('hello');
+
+
+// [2,4].forEach(alert)
+
+"use strict";
+ var nam = 'habib';
+ console.log(nam);
+
+ (function (){
+    'use strict';
+
+     console.log('habibulla');
+     
+
+ })()
+
+ let x= 3.55;
+ myFunction();
+
+ function myFunction(){
+    'use strict';
+     let y=3.33;
+    
+    
+ }
+ 
